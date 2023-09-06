@@ -1,0 +1,283 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    background-color: black;
+    overflow: hidden;
+    margin: 0;
+}
+.main{
+    /*100vh means 100%of total screen size*/
+    height: 100vh;
+    display: flex;
+    padding: 0.5rem;
+
+}
+.sidebar{
+    width: 340px;
+    background-color: black;
+    /*1 rem means 16px here*/
+    border-radius: 1rem;
+    margin-right: 0.5rem;
+}
+.main-content{
+    /*flex: 1 means all the leftout space after siderbar be given to main-content*/
+    flex: 1;
+    background-color: #121212;
+    border-radius: 1rem;
+    /*we want scroll bar for main-content only*/
+    overflow: auto;
+    padding: 0 1.5rem 0 1.5rem;
+}
+.music-player{
+    position: fixed;
+    bottom: 0px;
+    background-color: black;
+    width: 100%;
+    height: 72px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.nav{
+    display: flex;
+    background-color: #121212;
+    border-radius: 1rem;
+    flex-direction: column;
+    height: 100px;
+    padding: 0.5rem,0.75rem;
+}
+.nav-option{
+    opacity: 0.7;
+    line-height: 2.5rem;
+    padding: 0.5rem 0.75rem;
+}
+.nav-option i{
+    font-size: 1.25rem;
+}
+.nav-option:hover{
+    opacity: 1;
+}
+.nav-option a{
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+.library{
+    background-color: #121212;
+    border-radius: 1rem;
+    height: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0.75rem;
+
+}
+.options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lib-option img{
+    height: 1.25rem;
+    width: 1.25rem;
+}
+.icons{
+    font-size: 1.30rem;
+    display: flex;
+}
+.icons i{
+    margin: 1rem;
+    opacity: 0.7;
+}
+.icons i:hover{
+    opacity: 1;
+}
+.box{
+    background-color: #232323;
+    border-radius: 0.75rem;
+    margin: 0.5rem 0 1.75rem 0;
+    padding: 0.5rem 1rem;
+    height: 8rem;
+
+}
+.boxp1{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.boxp2{
+    font-size: 0.85rem;
+    opacity: 0.75;
+}
+.badge{
+    border: none;
+    background-color: white;
+    font-weight: 700;
+    padding: 0.25rem 1rem;
+    border-radius: 100px;
+    margin-top: 0.25rem;
+    height: 2rem;
+}
+.dark-badge{
+    background-color: black;
+    color: white;
+}
+.sticky-nav{
+    position: sticky;/*sticky position will make it fixed whike scrolling the page*/
+    top: 0px;
+    background-color: #121212;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 01rem 0;
+    z-index: 10;
+}
+
+.sticky-nav-icons{
+    margin-left: 0.75rem;
+}
+.sticky-nav-options{
+    display: flex;
+    align-items: center;
+}
+.nav-items{
+    margin-right: 1.3rem;
+}
+@media(max-width: 1000px){
+    .hide{
+        display: none;
+    }
+}
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card{
+    background-color: #232323;
+    width: 150px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1rem 1.5rem 1rem 1.5rem;
+}
+.card-image{
+    width: 100%;
+    border-radius: 0.5rem;
+}
+.card-title{
+    font-weight: 600;
+}
+.card-info{
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+.footer{
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.line{
+    width: 90%;
+    height: 30%;
+    border-top: 1px solid white;
+    opacity: 0.7;
+}
+.music-player{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.album{
+    width: 25%;
+}
+.player{
+    width: 50%;
+}
+.controls{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.playericons{
+    height: 1rem;
+    margin-right: 2rem;
+    opacity: 0.7;
+}
+.playericons:hover{
+    opacity: 1;
+}
+.player-control{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.playback-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.progress-bar{
+    width: 70%;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+/*to style the progress-bar's track acc. to us*/
+.progress-bar::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.2rem;
+}
+/*to style progress-bar's pointer*/
+.progress-bar::-webkit-slider-thumb{
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top: -6px;
+}
+.album{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+    margin-left: 1 rem;
+}
+.photo{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 25%;
+}
+.artist{
+    width: 50%;
+    color: white;
+}
+.shapes{
+    width: 25%;
+    margin-right: 3rem;
+    margin-left: 3rem;
+}
+.song{
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+.name{
+    font-size: 0.85rem;
+}
+.ci{
+    position: absolute;
+    right: 180px;
+    margin-right: 2rem;
+}
+.ci i{
+    margin-left: 2rem;
+    opacity: 0.7;
+    cursor: pointer;
+}
+.ci i:hover{
+    opacity: 1;
+}
+.volume-meter{
+    position: absolute;
+    right: 50px;
+}
